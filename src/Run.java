@@ -6,10 +6,12 @@ public class Run {
         System.out.println("Przed: " + Arrays.toString(numbers));
         bubbleSort(numbers);
         System.out.println("Po: " + Arrays.toString(numbers));
+        Arrays.stream(numbers).forEach(n -> System.out.printf(n + ", "));
     }
 
     static void bubbleSort(int[] numbers) {
         boolean notChange = false;
+
         while (!notChange) {
             notChange = true;
             for (int i = 0; i < numbers.length - 1; i++) {
